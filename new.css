@@ -58,7 +58,9 @@
     display: flex;
     justify-content: space-between;
     background-color: #f3f3f3;
-    width: 620px;
+    flex: 1;
+    max-width:620px;
+    margin:0 20px;
     height: 37px;
     border-radius: 8px;
 }
@@ -151,7 +153,8 @@
     font-weight: bold;
 }
 .hero-section{
-    height:312px;
+    min-height:312px;
+    background-position: center;
     background-size:cover;
     background-image:url(image.png);
     display: flex;
@@ -181,13 +184,17 @@
 .box{
     background-color:#ffffff;
     height: 400px;
-    width: 22.5%;
+    width :280px;
+    max-width: 100%;
     padding: 20px 0px 15px;
   
 }
 .shop-section{
      display: flex;
      justify-content: space-evenly;
+     flex-wrap: wrap;
+     gap: 20px;
+     padding: 20px;
      min-height:72.5vh;
      max-height: 100%;
      background: linear-gradient(180deg,#d681ff 0%,#f3f0f0 80%);
@@ -222,8 +229,8 @@
    margin-left: 20px;
 }
 .pop img{
-    height:200px;
-    width: 97%;
+    height:auto;
+    width: 100%;
     margin: 20px;
 }
 .pop h2{
@@ -237,8 +244,8 @@
     margin-left: 20px;
 }
 .toy img{
-    height:200px;
-    width: 97%;
+    height:auto;
+    width: 100%;
     margin: 20px;
 }
 .toy h2{
@@ -247,6 +254,9 @@
 }.shop-section1{
      display: flex;
      justify-content: space-evenly;
+     flex-wrap: wrap;
+     gap: 20px;
+     padding: 20px;
     background-color: #f3f0f0;
      color: #0f1111;
      margin-top: 20px;
@@ -295,6 +305,8 @@
      height: 300px;
      width: 100%;
      display: flex;
+     flex-wrap: wrap;
+     gap: 30px;
      justify-content: space-evenly;
      color: #ffffff;
      font-size: 0.8em;
@@ -342,4 +354,64 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+@media (max-width: 992px){
+
+.navbar{
+    flex-wrap:wrap;
+    height:auto;
+    padding:10px;
+}
+
+.nav-search{
+    width:100%;
+    margin-top:10px;
+}
+
+.box{
+    width:45%;
+}
+
+.footer2{
+    flex-wrap:wrap;
+}
+
+}
+@media (max-width:600px){
+
+.navbar{
+    flex-direction:column;
+}
+
+.panel{
+    flex-direction:column;
+    height:auto;
+}
+
+.panel-ops{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.box{
+    width:100%;
+}
+
+.hero-msg{
+    font-size:12px;
+    text-align:center;
+    padding:10px;
+}
+
+.footer1{
+    flex-direction:column;
+    height:auto;
+    padding:20px;
+}
+
+.logo1{
+    margin-right:0;
+}
 }
